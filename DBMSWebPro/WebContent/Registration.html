@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+td{
+color : red;
+}
+</style>
+<script>
+function msg()
+{
+var pass=document.A.pass1.value;
+var l=pass.length;
+if(l<=4){document.getElementById("passA").innerHTML="poor";}
+else if(l>4&&l<=8){document.getElementById("passA").innerHTML="good";}	
+else{document.getElementById("passA").innerHTML="better";}
+}
+
+</script>
+
+<meta charset="ISO-8859-1">
+<h1><B><CENTER>REGISTARTION FORM</CENTER></B></h1>
+<title>Register yourself</title>
+</head>
+<body background="textured.jpg">
+
+<form name="A" target="content" action="setData" method="post">
+<table>
+<tr>
+<td>NAME :</td>
+<td><input type="text" name="name"/></td>
+</tr>
+<tr>
+<td>PASSWORD : </td>
+<td><input type="password" id="nam" name="pass1" onkeypress="msg()"/></td>
+<td>STRENGTH : <label id="passA"></label></td>
+</tr>
+<tr>
+<td>RE-ENTER PASSWORD : </td>
+<td><input type="password" name="pass2"/></td>
+<td><label id="l2"></label></td>
+</tr>
+<tr>
+<td>DATE OF BIRTH :</td>
+<td><input type="date" name="date1"/></td>
+</tr>
+<tr>
+<td>EMAIL ID :</td>
+<td><input type="email" name="email" value="nil@gmail.com"/></td>
+</tr>
+</table>
+<input type="submit" value="SUBMIT"/>
+
+</form>
+</body>
+</html>

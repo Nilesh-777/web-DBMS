@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+td{
+color : red;
+}
+</style>
+<script type="text/javascript">
+function msg()
+{
+var past=document.A.pass1.value;
+var pass=past.length;
+if(pass<=4){document.getElementById("passA").innerText="poor";}
+if(pass>4&&pass<=8){document.getElementById("passA").innerHTML="good";}	
+if(pass>8){document.getElementByIdI("passA").innerHTML="better";}
+	}
+	
+</script>
+
+<meta charset="ISO-8859-1">
+<h1><B><CENTER>REGISTARTION FORM</CENTER></B></h1>
+<title>Register yourself</title>
+</head>
+<body background="dynamicContent.jpg">
+
+<form name="A" action="NewFile.jsp">
+<table>
+<tr>
+<td>NAME :</td>
+<td><input type="text" name="name"/></td>
+</tr>
+<tr>
+<td>PASSWORD : </td>
+<td><input type="password" name="pass1" onkeypress="msg()"/></td>
+<td>STRENGTH : <div id="passA"></div></td>
+</tr>
+<tr>
+<td>RE-ENTER PASSWORD : </td>
+<td><input type="password" name="pass2"/></td>
+</tr>
+<tr>
+<td>DATE OF BIRTH :</td>
+<td><input type="date" name="date1"/></td>
+</tr>
+<tr>
+<td>EMAIL ID :</td>
+<td><input type="email" name="email"/></td>
+</tr>
+</table>
+<input type="submit" value="SUBMIT"/>
+
+</form>
+</body>
+</html>
